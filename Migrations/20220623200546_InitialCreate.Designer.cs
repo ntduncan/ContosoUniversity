@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContosoUniversity.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20220623070301_Inheritance")]
-    partial class Inheritance
+    [Migration("20220623200546_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -164,8 +164,6 @@ namespace ContosoUniversity.Migrations
                     b.Property<DateTime>("HireDate")
                         .HasColumnType("TEXT");
 
-                    b.ToTable("Person", (string)null);
-
                     b.HasDiscriminator().HasValue("Instructor");
                 });
 
@@ -175,8 +173,6 @@ namespace ContosoUniversity.Migrations
 
                     b.Property<DateTime>("EnrollmentDate")
                         .HasColumnType("TEXT");
-
-                    b.ToTable("Person", (string)null);
 
                     b.HasDiscriminator().HasValue("Student");
                 });
