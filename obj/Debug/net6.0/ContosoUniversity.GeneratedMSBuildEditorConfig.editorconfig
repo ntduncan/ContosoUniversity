@@ -35,6 +35,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/nathanduncan/Desktop/ContosoUniversity/Views/Departments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudHMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nathanduncan/Desktop/ContosoUniversity/Views/Departments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudHMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nathanduncan/Desktop/ContosoUniversity/Views/Departments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudHMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nathanduncan/Desktop/ContosoUniversity/Views/Departments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nathanduncan/Desktop/ContosoUniversity/Views/Departments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/nathanduncan/Desktop/ContosoUniversity/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

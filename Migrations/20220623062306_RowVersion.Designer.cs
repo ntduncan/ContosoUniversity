@@ -3,6 +3,7 @@ using System;
 using ContosoUniversity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContosoUniversity.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    partial class SchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20220623062306_RowVersion")]
+    partial class RowVersion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.6");
@@ -112,6 +114,31 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("Enrollment", (string)null);
                 });
 
+            modelBuilder.Entity("ContosoUniversity.Models.Instructor", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("FirstMidName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT")
+                        .HasColumnName("FirstName");
+
+                    b.Property<DateTime>("HireDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Instructor", (string)null);
+                });
+
             modelBuilder.Entity("ContosoUniversity.Models.OfficeAssignment", b =>
                 {
                     b.Property<int>("InstructorID")
@@ -127,14 +154,13 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("OfficeAssignment", (string)null);
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Person", b =>
+            modelBuilder.Entity("ContosoUniversity.Models.Student", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
+                    b.Property<DateTime>("EnrollmentDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstMidName")
@@ -150,33 +176,7 @@ namespace ContosoUniversity.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Person", (string)null);
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Person");
-                });
-
-            modelBuilder.Entity("ContosoUniversity.Models.Instructor", b =>
-                {
-                    b.HasBaseType("ContosoUniversity.Models.Person");
-
-                    b.Property<DateTime>("HireDate")
-                        .HasColumnType("TEXT");
-
-                    b.ToTable("Person", (string)null);
-
-                    b.HasDiscriminator().HasValue("Instructor");
-                });
-
-            modelBuilder.Entity("ContosoUniversity.Models.Student", b =>
-                {
-                    b.HasBaseType("ContosoUniversity.Models.Person");
-
-                    b.Property<DateTime>("EnrollmentDate")
-                        .HasColumnType("TEXT");
-
-                    b.ToTable("Person", (string)null);
-
-                    b.HasDiscriminator().HasValue("Student");
+                    b.ToTable("Student", (string)null);
                 });
 
             modelBuilder.Entity("ContosoUniversity.Models.Course", b =>
