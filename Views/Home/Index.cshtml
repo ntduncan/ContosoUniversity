@@ -1,11 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="jumbotron">
+<div class="home">
+<div class="jumbotron text-light">
     <h1>Contoso University</h1>
 </div>
-<div class="row home-body">
+<div class="row home-body text-center">
     <div class="col-md-4">
         <h2>Welcome to Contoso University</h2>
         <p>
@@ -25,6 +25,7 @@
         <p><a class="btn btn-default" href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/data/ef-mvc/intro/samples/5cu-final">See project source code &raquo;</a></p>
     </div>
 </div>
+</div>
 
 <style>
     .jumbotron {
@@ -35,5 +36,23 @@
     }
     .home-body {
         margin: 1em 0;
+        color: #fff;
+        background-color: #d5d5d5;
+        opacity: 0.95;
+        padding: 3em 2em;
+        border-radius: 3px;
+    }
+    body{
+        background-image: url("../university.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .home {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: center;
     }
 </style>

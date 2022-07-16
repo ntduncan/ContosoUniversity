@@ -15,5 +15,14 @@ html {
 
 body {
   margin-bottom: 60px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.btn-primary {
+  background: #cc0000; border-color: #cc0000;
+}
+
+.btn-primary:hover {
+  background: #aa0000; border-color: #aa0000;
 }
